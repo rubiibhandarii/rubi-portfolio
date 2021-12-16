@@ -384,6 +384,9 @@ img {
     display: inline-block;
     margin-bottom: var(--mb-2);
 }
+.contact__text a {
+    color: var(--second-color);
+}
 .contact__inputs {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -397,6 +400,9 @@ img {
     font-size: var(--normal-font-size);
     margin-bottom: var(--mb-4);
     border-radius: 0.5rem;
+}
+#message-input {
+    resize: none;
 }
 .contact__button {
     display: block;

@@ -236,23 +236,27 @@
                 <div class="contact__container bd-grid">
                     <div class="contact__info">
                         <h3 class="contact__subtitle">EMAIL</h3>
-                        <span class="contact__text"
-                            >rubiibhandarii@gmail.com</span
+                        <span class="contact__text">
+                            <a href="mailto: rubiibhandarii@gmail.com"
+                                >rubiibhandarii@gmail.com</a
+                            ></span
                         >
 
                         <h3 class="contact__subtitle">PHONE</h3>
-                        <span class="contact__text">+977 9843807283</span>
+                        <span class="contact__text">
+                            <a href="tel:+9779843807283">+977 9843807283</a>
+                        </span>
 
                         <h3 class="contact__subtitle">Address</h3>
                         <span class="contact__text">Kharibot, Lalitpur</span>
                     </div>
 
                     <form
+                        id="contact-form"
                         action=""
                         class="contact__form"
                         name="contact"
                         method="POST"
-                        data-netlify="true"
                     >
                         <div class="contact__inputs">
                             <input
@@ -260,22 +264,27 @@
                                 type="text"
                                 placeholder="Name"
                                 class="contact__input"
+                                id="name-input"
+                                required
                             />
                             <input
                                 name="email"
-                                type="mail"
+                                type="email"
                                 placeholder="Email"
                                 class="contact__input"
+                                id="email-input"
+                                required
                             />
                         </div>
 
                         <textarea
                             name="message"
-                            id=""
+                            id="message-input"
                             cols="0"
                             rows="10"
                             class="contact__input"
                             placeholder="Message"
+                            required
                         ></textarea>
 
                         <input
@@ -318,6 +327,9 @@
 
         <!--===== SCROLL REVEAL =====-->
         <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!-- SMTP EMAIL -->
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
 
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>

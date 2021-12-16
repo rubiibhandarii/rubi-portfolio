@@ -66,3 +66,35 @@ sr.reveal('.contact__subtitle', {});
 sr.reveal('.contact__text', { interval: 200 });
 sr.reveal('.contact__input', { delay: 400 });
 sr.reveal('.contact__button', { delay: 600 });
+
+const contactForm = document.querySelector('#contact-form');
+contactForm.addEventListener('submit', submitForm);
+
+function submitForm(e) {
+    e.preventDefault();
+
+    const name = document.querySelector('#name-input').value;
+    const email = document.querySelector('#email-input').value;
+    const message = document.querySelector('#message-input').value;
+
+    sendEmail(name, email, message);
+}
+
+function sendEmail(name, email, message) {
+    Email.send({
+        Host: 'smtp.gmail.com',
+        Username: 'jameskulu55@gmail.com',
+        Password: 'rsxzqhxhbmneshfs',
+        To: 'jameskulu55@gmail.com',
+        From: 'jameskulu55@gmail.com',
+        Subject: `${name} sent you a message on your website`,
+        Body: `Name: ${name}<br />Email: ${email}<br /><br />${message}`,
+    })
+        .then((message) => {
+            contactForm.reset();
+            alert('Thank you for the message.');
+        })
+        .catch((err) => {
+            alert('Something went wrong.');
+        });
+}
