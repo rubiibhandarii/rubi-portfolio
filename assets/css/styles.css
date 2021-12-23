@@ -350,8 +350,12 @@ img {
 
 .skills__img {
     border-radius: 0.5rem;
+    margin-bottom: 25px;
 }
-
+.skill__img {
+    border-radius: 0.5rem;
+    height: 100%;
+}
 /* ===== WORK =====*/
 .work__container {
     row-gap: 2rem;
